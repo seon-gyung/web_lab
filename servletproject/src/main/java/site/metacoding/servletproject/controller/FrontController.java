@@ -21,11 +21,16 @@ public class FrontController extends HttpServlet {
     public FrontController() {
     	System.out.println("나 메모리에 떴어 : FrontController");
     }
+    
+    public void 공통로직처리() {
+    	
+    }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("front 컨트롤러로 요청 들어옴.");
 		
 		// 공통 로직 처리!!!
+		공통로직처리();
 		
 		// 1. 라우터 만들기
 		String path = request.getParameter("path");
